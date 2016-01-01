@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		0C4C26E4491830D26C64DEF84348EAD9 /* Pods-SWImagePickerManager_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E3405F3F0C87D078F5B7EFB2E493B1 /* Pods-SWImagePickerManager_Example-dummy.m */; };
 		0D86BF1E4E9D01ABA4E0A23E72F2B978 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
-		2508F334F528017A878B8F75DE991A5E /* SWImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96976B96896662AB069B6010CA910E1 /* SWImagePickerManager.swift */; };
 		36F6CD2D3F105BC3750A5BEE2A2FDB1D /* SWImagePickerManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A408484437E3A07DB042C7370D77F2A9 /* SWImagePickerManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D8F01D3EE76114594544997EBE5C905 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
-		5D97E5871E393DAEE8D80DD88FDE3AA6 /* SWImagePickerManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8406BE4DBAC534C1EF928618DD0F4C1 /* SWImagePickerManager-dummy.m */; };
 		6715D521394721E8CC540B0251A87B5A /* Pods-SWImagePickerManager_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DABB2669C3C9F3B07FE31DF3F7E54B59 /* Pods-SWImagePickerManager_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		820D268E153499979FE48EE9076371DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		950EC1866DF2639F2F8EC0505DF31D1B /* SWImagePickerManagerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939121D6B222C9510CDB5447199348A /* SWImagePickerManagerResult.swift */; };
+		A390853BFC73D06BA5671691E1BEFC60 /* SWImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CD422460D4A363D2EF76BC0CFCE160 /* SWImagePickerManager.swift */; };
 		E551A85D57768048AD4F0749A5F17735 /* Pods-SWImagePickerManager_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7226BD44A822A63D4D0365850D715039 /* Pods-SWImagePickerManager_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9134822E0F3CE4FF5D4D50261B53FA3 /* SWImagePickerManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8406BE4DBAC534C1EF928618DD0F4C1 /* SWImagePickerManager-dummy.m */; };
 		EBF274AFD49E475ECE4314A47DFB9071 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
 		ED30BB4DFBDB98C28C6DCC087B81FD70 /* Pods-SWImagePickerManager_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D22585ADE405528B2B7B230E9B6069 /* Pods-SWImagePickerManager_Tests-dummy.m */; };
 		EEA02BE963580767AC9C5BCBC9DAB754 /* SWImagePickerManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9E7CA003970A014B6DC76ED6D7F18C62 /* SWImagePickerManager.bundle */; };
@@ -53,11 +54,13 @@
 		2F1938C35546BF0A8D1529D47E1BCA3D /* Pods-SWImagePickerManager_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SWImagePickerManager_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		37AFE715FB4E395BD73CBC20D6E48BE5 /* Pods-SWImagePickerManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWImagePickerManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		39E3405F3F0C87D078F5B7EFB2E493B1 /* Pods-SWImagePickerManager_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SWImagePickerManager_Example-dummy.m"; sourceTree = "<group>"; };
+		49CD422460D4A363D2EF76BC0CFCE160 /* SWImagePickerManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SWImagePickerManager.swift; sourceTree = "<group>"; };
 		4CB8A7378BD2DE8320AAD561D56F1A6F /* Pods-SWImagePickerManager_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SWImagePickerManager_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		4EE0C6F50F421048A09B7B9B8BF2C73C /* Pods-SWImagePickerManager_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SWImagePickerManager_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		55510635F10F6187AE063C9810BE1DB5 /* Pods-SWImagePickerManager_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SWImagePickerManager_Tests-resources.sh"; sourceTree = "<group>"; };
 		5E722C9A971DBA4BFFC54A275256A9C4 /* Pods-SWImagePickerManager_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SWImagePickerManager_Example.modulemap"; sourceTree = "<group>"; };
 		6142BBCF81628ECE999FD04D17E2C730 /* Pods_SWImagePickerManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWImagePickerManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6939121D6B222C9510CDB5447199348A /* SWImagePickerManagerResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SWImagePickerManagerResult.swift; sourceTree = "<group>"; };
 		6D0A1945191AD87DA0711BE9ABA4EF84 /* Pods-SWImagePickerManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWImagePickerManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		70AA6A285E27147EDF3973968BE1D4F0 /* SWImagePickerManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SWImagePickerManager.modulemap; sourceTree = "<group>"; };
@@ -77,7 +80,6 @@
 		C8406BE4DBAC534C1EF928618DD0F4C1 /* SWImagePickerManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWImagePickerManager-dummy.m"; sourceTree = "<group>"; };
 		CB17C42E6470588867125DE2CA39E7F8 /* Pods-SWImagePickerManager_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SWImagePickerManager_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DABB2669C3C9F3B07FE31DF3F7E54B59 /* Pods-SWImagePickerManager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SWImagePickerManager_Tests-umbrella.h"; sourceTree = "<group>"; };
-		E96976B96896662AB069B6010CA910E1 /* SWImagePickerManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SWImagePickerManager.swift; sourceTree = "<group>"; };
 		F2F1C38BCF0D3AE4B610BF2A90B7950F /* Pods-SWImagePickerManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWImagePickerManager_Example.release.xcconfig"; sourceTree = "<group>"; };
 		FE8BBA67B11281EE561D748199DC1629 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,11 +132,19 @@
 		24BC07504F57DFFEDD4624D2B8DBADCD /* SWImagePickerManager */ = {
 			isa = PBXGroup;
 			children = (
-				FF5433F3CFBA5E96173EE5EB823F2F64 /* Pod */,
+				27786DC2C8A396309ED80A49FB1F1D9E /* Pod */,
 				8A120F880CB26D56299DA08EBAD25E1E /* Support Files */,
 			);
 			name = SWImagePickerManager;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		27786DC2C8A396309ED80A49FB1F1D9E /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				A9DA9CE187A88D11F4D70FA5F9A19867 /* Classes */,
+			);
+			path = Pod;
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
@@ -199,10 +209,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		953C7CB169262E6C3160065577F70EB0 /* Classes */ = {
+		A9DA9CE187A88D11F4D70FA5F9A19867 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E96976B96896662AB069B6010CA910E1 /* SWImagePickerManager.swift */,
+				49CD422460D4A363D2EF76BC0CFCE160 /* SWImagePickerManager.swift */,
+				6939121D6B222C9510CDB5447199348A /* SWImagePickerManagerResult.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -242,14 +253,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		FF5433F3CFBA5E96173EE5EB823F2F64 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				953C7CB169262E6C3160065577F70EB0 /* Classes */,
-			);
-			path = Pod;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -284,7 +287,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6106974E5374998C29A6E48A0061C26D /* Build configuration list for PBXNativeTarget "SWImagePickerManager" */;
 			buildPhases = (
-				1A2C7D89D51828BC29937E2FC2C7CF7B /* Sources */,
+				15AB001AE0413DAFDF81C9B96BA2D3C2 /* Sources */,
 				5E15C06DAA203E90C7BAB0AF15EC14F2 /* Frameworks */,
 				FEBBFBF7455B998BF54B32C797839513 /* Resources */,
 				69FEF1EC1781491CDB578910B7E62129 /* Headers */,
@@ -407,12 +410,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1A2C7D89D51828BC29937E2FC2C7CF7B /* Sources */ = {
+		15AB001AE0413DAFDF81C9B96BA2D3C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D97E5871E393DAEE8D80DD88FDE3AA6 /* SWImagePickerManager-dummy.m in Sources */,
-				2508F334F528017A878B8F75DE991A5E /* SWImagePickerManager.swift in Sources */,
+				E9134822E0F3CE4FF5D4D50261B53FA3 /* SWImagePickerManager-dummy.m in Sources */,
+				A390853BFC73D06BA5671691E1BEFC60 /* SWImagePickerManager.swift in Sources */,
+				950EC1866DF2639F2F8EC0505DF31D1B /* SWImagePickerManagerResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

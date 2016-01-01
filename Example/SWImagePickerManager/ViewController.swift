@@ -23,8 +23,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapOpenImageSelector(sender: AnyObject) {
-        self.manager.showImageSourcesSelector(fromViewController: self) { (image) -> () in
-            print("Got image: \(image)")
+        self.manager.showImageSourcesSelector(fromViewController: self) { (result) -> () in
+
+            switch result {
+            case .Image(let image):
+                print("Got image: \(image)")
+            case .Cancelled:
+                print("Cancelled")
+            }
         }
     }
 }

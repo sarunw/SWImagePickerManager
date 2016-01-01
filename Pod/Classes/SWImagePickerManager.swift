@@ -9,7 +9,7 @@
 import UIKit
 import MobileCoreServices
 
-public typealias ImageHandler = (image: UIImage) -> Void
+public typealias ImageHandler = (result: SWImagePickerManagerResult) -> Void
 
 public class SWImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -70,11 +70,17 @@ public class SWImagePickerManager: NSObject, UIImagePickerControllerDelegate, UI
         
         let image = (info[UIImagePickerControllerEditedImage] ?? info[UIImagePickerControllerOriginalImage]) as! UIImage
         
-        handler(image: image)
+        let result = SWImagePickerManagerResult.Image(image)
+        handler(result: result)
+        
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
     
     public func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        if let handler = self.handler {
+            let result = SWImagePickerManagerResult.Cancelled
+            handler(result: result)
+        }
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
 }
