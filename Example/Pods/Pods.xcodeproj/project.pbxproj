@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0C4C26E4491830D26C64DEF84348EAD9 /* Pods-SWImagePickerManager_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E3405F3F0C87D078F5B7EFB2E493B1 /* Pods-SWImagePickerManager_Example-dummy.m */; };
+		0D86BF1E4E9D01ABA4E0A23E72F2B978 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
 		2508F334F528017A878B8F75DE991A5E /* SWImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96976B96896662AB069B6010CA910E1 /* SWImagePickerManager.swift */; };
 		36F6CD2D3F105BC3750A5BEE2A2FDB1D /* SWImagePickerManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A408484437E3A07DB042C7370D77F2A9 /* SWImagePickerManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D8F01D3EE76114594544997EBE5C905 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		4B228E3C3E0841577BC91DE6A6D9EF83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		3D8F01D3EE76114594544997EBE5C905 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
 		5D97E5871E393DAEE8D80DD88FDE3AA6 /* SWImagePickerManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8406BE4DBAC534C1EF928618DD0F4C1 /* SWImagePickerManager-dummy.m */; };
 		6715D521394721E8CC540B0251A87B5A /* Pods-SWImagePickerManager_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DABB2669C3C9F3B07FE31DF3F7E54B59 /* Pods-SWImagePickerManager_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		820D268E153499979FE48EE9076371DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
 		E551A85D57768048AD4F0749A5F17735 /* Pods-SWImagePickerManager_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7226BD44A822A63D4D0365850D715039 /* Pods-SWImagePickerManager_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EBF274AFD49E475ECE4314A47DFB9071 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		EBF274AFD49E475ECE4314A47DFB9071 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
 		ED30BB4DFBDB98C28C6DCC087B81FD70 /* Pods-SWImagePickerManager_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D22585ADE405528B2B7B230E9B6069 /* Pods-SWImagePickerManager_Tests-dummy.m */; };
 		EEA02BE963580767AC9C5BCBC9DAB754 /* SWImagePickerManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9E7CA003970A014B6DC76ED6D7F18C62 /* SWImagePickerManager.bundle */; };
 /* End PBXBuildFile section */
@@ -52,13 +53,13 @@
 		2F1938C35546BF0A8D1529D47E1BCA3D /* Pods-SWImagePickerManager_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SWImagePickerManager_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		37AFE715FB4E395BD73CBC20D6E48BE5 /* Pods-SWImagePickerManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWImagePickerManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		39E3405F3F0C87D078F5B7EFB2E493B1 /* Pods-SWImagePickerManager_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SWImagePickerManager_Example-dummy.m"; sourceTree = "<group>"; };
-		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4CB8A7378BD2DE8320AAD561D56F1A6F /* Pods-SWImagePickerManager_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SWImagePickerManager_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		4EE0C6F50F421048A09B7B9B8BF2C73C /* Pods-SWImagePickerManager_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SWImagePickerManager_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		55510635F10F6187AE063C9810BE1DB5 /* Pods-SWImagePickerManager_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SWImagePickerManager_Tests-resources.sh"; sourceTree = "<group>"; };
 		5E722C9A971DBA4BFFC54A275256A9C4 /* Pods-SWImagePickerManager_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SWImagePickerManager_Example.modulemap"; sourceTree = "<group>"; };
 		6142BBCF81628ECE999FD04D17E2C730 /* Pods_SWImagePickerManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWImagePickerManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D0A1945191AD87DA0711BE9ABA4EF84 /* Pods-SWImagePickerManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWImagePickerManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		70AA6A285E27147EDF3973968BE1D4F0 /* SWImagePickerManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SWImagePickerManager.modulemap; sourceTree = "<group>"; };
 		7226BD44A822A63D4D0365850D715039 /* Pods-SWImagePickerManager_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SWImagePickerManager_Example-umbrella.h"; sourceTree = "<group>"; };
 		778F40FF49A0ACB79BE78DCAA840AF54 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 		BB83EF90F5AE7CB16AF94ECA87EA2510 /* Pods-SWImagePickerManager_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SWImagePickerManager_Example-resources.sh"; sourceTree = "<group>"; };
 		BEA8A076F1CACE3A05EAA339903EFAB1 /* Pods-SWImagePickerManager_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SWImagePickerManager_Example-frameworks.sh"; sourceTree = "<group>"; };
 		BF3C4F0FED41328004E7C37579F19728 /* Pods-SWImagePickerManager_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SWImagePickerManager_Tests.modulemap"; sourceTree = "<group>"; };
+		C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C8406BE4DBAC534C1EF928618DD0F4C1 /* SWImagePickerManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWImagePickerManager-dummy.m"; sourceTree = "<group>"; };
 		CB17C42E6470588867125DE2CA39E7F8 /* Pods-SWImagePickerManager_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SWImagePickerManager_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DABB2669C3C9F3B07FE31DF3F7E54B59 /* Pods-SWImagePickerManager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SWImagePickerManager_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -81,19 +83,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1095B4B06096FA0A4AE9399E20387C72 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4B228E3C3E0841577BC91DE6A6D9EF83 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2E66AA39A61CEA7617077E97FF35C901 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EBF274AFD49E475ECE4314A47DFB9071 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E15C06DAA203E90C7BAB0AF15EC14F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				820D268E153499979FE48EE9076371DA /* Foundation.framework in Frameworks */,
+				0D86BF1E4E9D01ABA4E0A23E72F2B978 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18340F12838DEE43507667CC74401EB1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */,
+				C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		24BC07504F57DFFEDD4624D2B8DBADCD /* SWImagePickerManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +135,14 @@
 			);
 			name = SWImagePickerManager;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18340F12838DEE43507667CC74401EB1 /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5A6AC6970094055E7DCB84A059D5AE6B /* Pods-SWImagePickerManager_Tests */ = {
@@ -148,7 +168,7 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				AC7C8A4E0BF0B6B5ABFA12C22566B854 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
 				9223F14A9EE5587986CE601C97251383 /* Products */,
 				F98C388D6C70AD816A885362842E0551 /* Targets Support Files */,
 			);
@@ -213,22 +233,6 @@
 			path = "Target Support Files/Pods-SWImagePickerManager_Example";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		F98C388D6C70AD816A885362842E0551 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,7 +285,7 @@
 			buildConfigurationList = 6106974E5374998C29A6E48A0061C26D /* Build configuration list for PBXNativeTarget "SWImagePickerManager" */;
 			buildPhases = (
 				1A2C7D89D51828BC29937E2FC2C7CF7B /* Sources */,
-				1095B4B06096FA0A4AE9399E20387C72 /* Frameworks */,
+				5E15C06DAA203E90C7BAB0AF15EC14F2 /* Frameworks */,
 				FEBBFBF7455B998BF54B32C797839513 /* Resources */,
 				69FEF1EC1781491CDB578910B7E62129 /* Headers */,
 			);

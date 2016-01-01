@@ -1,17 +1,17 @@
 {
   "name": "SWImagePickerManager",
   "version": "0.1.0",
-  "summary": "A short description of SWImagePickerManager.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/SWImagePickerManager",
+  "summary": "Simple image picker",
+  "homepage": "https://github.com/sarunw/SWImagePickerManager",
   "license": "MIT",
   "authors": {
     "Sarun Wongpatcharapakorn": "artwork.th@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/SWImagePickerManager.git",
+    "git": "https://github.com/sarunw/SWImagePickerManager.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/sarunw",
   "platforms": {
     "ios": "8.0"
   },
@@ -21,5 +21,6 @@
     "SWImagePickerManager": [
       "Pod/Assets/*.png"
     ]
-  }
+  },
+  "frameworks": "UIKit"
 }

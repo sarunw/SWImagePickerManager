@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SWImagePickerManager: d452de0b2001b35f0e89fd349fc60c48ca6e80dd
+  SWImagePickerManager: bd8b1332eb4764f56bce24bd1df1ebe8dfaf7adc
 
 COCOAPODS: 0.39.0
