@@ -36,9 +36,9 @@ public class SWImagePickerManager: NSObject, UIImagePickerControllerDelegate, UI
             self.showImagePickerWithSourceType(.PhotoLibrary, fromViewController: viewController)
         }
         
-        let lastPhoto = UIAlertAction(title: "Last Photo Taken", style: .Default) { (action) -> Void in
-            
-        }
+//        let lastPhoto = UIAlertAction(title: "Last Photo Taken", style: .Default) { (action) -> Void in
+//            
+//        }
         
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
             actionSheet.addAction(photoLibrary)
