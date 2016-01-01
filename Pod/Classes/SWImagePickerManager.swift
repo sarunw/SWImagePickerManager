@@ -40,8 +40,9 @@ public class SWImagePickerManager: NSObject, UIImagePickerControllerDelegate, UI
             actionSheet.addAction(photoLibrary)
         }
         
-        let cancel = UIAlertAction(title: "Cancel", style: .Cancel) { (action) -> Void in
-            
+        let cancel = UIAlertAction(title: "Cancel", style: .Cancel) { [unowned self] (action) -> Void in
+            let result = SWImagePickerManagerResult.Cancelled
+            self.handler?(result: result)
         }
         
         actionSheet.addAction(cancel)
