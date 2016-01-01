@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import SWImagePickerManager
 
 class ViewController: UIViewController {
-
+    let manager = SWImagePickerManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,5 +22,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func didTapOpenImageSelector(sender: AnyObject) {
+        self.manager.showImageSourcesSelector(fromViewController: self) { (image) -> () in
+            print("Got image: \(image)")
+        }
+    }
 }
 

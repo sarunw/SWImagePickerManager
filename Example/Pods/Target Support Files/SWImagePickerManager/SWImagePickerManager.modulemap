@@ -1,0 +1,6 @@
+framework module SWImagePickerManager {
+  umbrella header "SWImagePickerManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
