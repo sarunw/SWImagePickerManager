@@ -25,7 +25,7 @@ public class SWImagePickerManager: NSObject, UIImagePickerControllerDelegate, UI
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
         
         let takePhoto = UIAlertAction(title: "Take Photo", style: .Default) { (action) -> Void in
-            
+            self.showImagePickerWithSourceType(.Camera, fromViewController: viewController)
         }
         
         if UIImagePickerController.isSourceTypeAvailable(.Camera) {
