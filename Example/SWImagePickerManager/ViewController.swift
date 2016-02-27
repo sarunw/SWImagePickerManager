@@ -10,7 +10,9 @@ import UIKit
 import SWImagePickerManager
 
 class ViewController: UIViewController {
+    
     let manager = SWImagePickerManager()
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +25,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapOpenImageSelector(sender: AnyObject) {
-        self.manager.showImageSourcesSelector(fromViewController: self) { (result) -> () in
+        self.manager.showImageSourcesSelector(fromViewController: self, source: sender) { (result) -> () in
 
             switch result {
             case .Image(let image):
-                print("Got image: \(image)")
+                self.imageView.image = image
             case .Cancelled:
                 print("Cancelled")
             }

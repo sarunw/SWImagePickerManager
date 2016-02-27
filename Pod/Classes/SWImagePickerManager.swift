@@ -19,13 +19,13 @@ public class SWImagePickerManager: NSObject, UIImagePickerControllerDelegate, UI
         
     }
     
-    public func showImageSourcesSelector(fromViewController viewController: UIViewController, handler: ImageHandler) {
+    public func showImageSourcesSelector(fromViewController viewController: UIViewController, source: AnyObject, handler: ImageHandler) {
         self.handler = handler
         
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
         
         let takePhoto = UIAlertAction(title: "Take Photo", style: .Default) { (action) -> Void in
-            self.showImagePickerWithSourceType(.Camera, fromViewController: viewController)
+            self.showImagePickerWithSourceType(.Camera, fromViewController: viewController, source: source)
         }
         
         if UIImagePickerController.isSourceTypeAvailable(.Camera) {
@@ -33,7 +33,7 @@ public class SWImagePickerManager: NSObject, UIImagePickerControllerDelegate, UI
         }
         
         let photoLibrary = UIAlertAction(title: "Choose from Library", style: .Default) { (action) -> Void in
-            self.showImagePickerWithSourceType(.PhotoLibrary, fromViewController: viewController)
+            self.showImagePickerWithSourceType(.PhotoLibrary, fromViewController: viewController, source: source)
         }
         
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
@@ -47,16 +47,32 @@ public class SWImagePickerManager: NSObject, UIImagePickerControllerDelegate, UI
         
         actionSheet.addAction(cancel)
         
+        if let barButtonItem = source as? UIBarButtonItem {
+            actionSheet.popoverPresentationController?.barButtonItem = barButtonItem
+        } else if let sourceView = source as? UIView {
+            actionSheet.popoverPresentationController?.sourceView = sourceView
+            actionSheet.popoverPresentationController?.sourceRect = sourceView.bounds
+        }
+        
+        
         viewController.presentViewController(actionSheet, animated: true, completion: nil)
     }
     
-    private func showImagePickerWithSourceType(sourceType: UIImagePickerControllerSourceType, fromViewController viewController: UIViewController) {
+    private func showImagePickerWithSourceType(sourceType: UIImagePickerControllerSourceType, fromViewController viewController: UIViewController, source: AnyObject) {
+        
         let picker = UIImagePickerController()
         picker.allowsEditing = false
         picker.mediaTypes = [kUTTypeImage as String]
         picker.sourceType = sourceType
         picker.delegate = self
+        picker.modalPresentationStyle = .Popover
         
+        if let barButtonItem = source as? UIBarButtonItem {
+            picker.popoverPresentationController?.barButtonItem = barButtonItem
+        } else if let sourceView = source as? UIView {
+            picker.popoverPresentationController?.sourceView = sourceView
+            picker.popoverPresentationController?.sourceRect = sourceView.bounds
+        }
         
         viewController.presentViewController(picker, animated: true, completion: {})
     }
