@@ -14,7 +14,7 @@ public typealias ImageHandler = (result: SWImagePickerManagerResult) -> Void
 
 public class SWImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    private var handler: ImageHandler?
+    private var handler: ImageHandler!
     
     public override init() {
         
@@ -128,26 +128,24 @@ public class SWImagePickerManager: NSObject, UIImagePickerControllerDelegate, UI
     
     // MARK: - UIImagePickerControllerDelegate
     public func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
- 
-        guard let handler = self.handler else {
-            picker.dismissViewControllerAnimated(true, completion: nil)
-            return
-        }
         
         let image = (info[UIImagePickerControllerEditedImage] ?? info[UIImagePickerControllerOriginalImage]) as! UIImage
         
         let result = SWImagePickerManagerResult.Image(image)
-        handler(result: result)
         
-        picker.dismissViewControllerAnimated(true, completion: nil)
+        
+        picker.dismissViewControllerAnimated(true) { () -> Void in
+            // handle after dismissed
+            self.handler(result: result)
+        }
     }
     
     public func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        if let handler = self.handler {
-            let result = SWImagePickerManagerResult.Cancelled
-            handler(result: result)
+        let result = SWImagePickerManagerResult.Cancelled
+        
+        picker.dismissViewControllerAnimated(true) { () -> Void in
+            self.handler(result: result)
         }
-        picker.dismissViewControllerAnimated(true, completion: nil)
     }
     
     private func fetchLastPhotoTakenForTargetSize(size: CGSize, completion: (image: UIImage?) -> ()) {
