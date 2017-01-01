@@ -24,13 +24,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func didTapOpenImageSelector(sender: AnyObject) {
+    @IBAction func didTapOpenImageSelector(_ sender: AnyObject) {
         self.manager.showImageSourcesSelector(fromViewController: self, source: sender) { (result) -> () in
 
             switch result {
-            case .Image(let image):
+            case .image(let image):
                 self.imageView.image = image
-            case .Cancelled:
+            case .cancelled:
                 print("Cancelled")
             }
         }

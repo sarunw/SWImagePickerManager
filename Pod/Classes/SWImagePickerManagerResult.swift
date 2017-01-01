@@ -10,6 +10,6 @@ import UIKit
 
 public enum SWImagePickerManagerResult {
     
-    case Cancelled
-    case Image(UIImage)
+    case cancelled
+    case image(UIImage)
 }

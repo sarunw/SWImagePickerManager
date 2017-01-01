@@ -10,62 +10,62 @@ import UIKit
 import MobileCoreServices
 import Photos
 
-public typealias ImageHandler = (result: SWImagePickerManagerResult) -> Void
+public typealias ImageHandler = (_ result: SWImagePickerManagerResult) -> Void
 
-public class SWImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+open class SWImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    private var handler: ImageHandler!
+    fileprivate var handler: ImageHandler!
     
     public override init() {
         
     }
     
-    public func showImageSourcesSelector(fromViewController viewController: UIViewController, source: AnyObject, handler: ImageHandler) {
+    open func showImageSourcesSelector(fromViewController viewController: UIViewController, source: AnyObject, handler: @escaping ImageHandler) {
         self.handler = handler
         
-        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        let lastPhoto = UIAlertAction(title: "Last Photo Taken", style: .Default) { (action) -> Void in
+        let lastPhoto = UIAlertAction(title: "Last Photo Taken", style: .default) { (action) -> Void in
             let status = PHPhotoLibrary.authorizationStatus()
             
             switch status {
-            case .Authorized:
+            case .authorized:
                 //handle authorized status
                 
                 self.fetchLastPhotoTakenForTargetSize(viewController.view.bounds.size, completion: { (image) -> () in
                     
                     if let image = image {
-                        let result = SWImagePickerManagerResult.Image(image)
-                        handler(result: result)
+                        let result = SWImagePickerManagerResult.image(image)
+                        handler(result)
                     } else {
-                        let result = SWImagePickerManagerResult.Cancelled
-                        handler(result: result)
+                        let result = SWImagePickerManagerResult.cancelled
+                        handler(result)
                     }
                 })
                 
-            case .Denied, .Restricted : break
+            case .denied, .restricted : break
                 //handle denied status
-            case .NotDetermined:
+            case .notDetermined:
                 // ask for permissions
                 PHPhotoLibrary.requestAuthorization() { (status) -> Void in
                     switch status {
-                    case .Authorized:
+                    case .authorized:
                         // as above
                         
                     self.fetchLastPhotoTakenForTargetSize(viewController.view.bounds.size, completion: { (image) -> () in
                         
                         if let image = image {
-                            let result = SWImagePickerManagerResult.Image(image)
-                            handler(result: result)
+                            let result = SWImagePickerManagerResult.image(image)
+                            handler(result)
                         } else {
-                            let result = SWImagePickerManagerResult.Cancelled
-                            handler(result: result)
+                            let result = SWImagePickerManagerResult.cancelled
+                            handler(result)
                         }
                     })
                         
-                    case .Denied, .Restricted: break
+                    case .denied, .restricted: break
                         // as above
-                    case .NotDetermined: break
+                    case .notDetermined: break
                         // won't happen but still
                     }
                 }
@@ -73,25 +73,25 @@ public class SWImagePickerManager: NSObject, UIImagePickerControllerDelegate, UI
         }
         actionSheet.addAction(lastPhoto)
         
-        let takePhoto = UIAlertAction(title: "Take Photo", style: .Default) { (action) -> Void in
-            self.showImagePickerWithSourceType(.Camera, fromViewController: viewController, source: source)
+        let takePhoto = UIAlertAction(title: "Take Photo", style: .default) { (action) -> Void in
+            self.showImagePickerWithSourceType(.camera, fromViewController: viewController, source: source)
         }
         
-        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
             actionSheet.addAction(takePhoto)
         }
         
-        let photoLibrary = UIAlertAction(title: "Choose from Library", style: .Default) { (action) -> Void in
-            self.showImagePickerWithSourceType(.PhotoLibrary, fromViewController: viewController, source: source)
+        let photoLibrary = UIAlertAction(title: "Choose from Library", style: .default) { (action) -> Void in
+            self.showImagePickerWithSourceType(.photoLibrary, fromViewController: viewController, source: source)
         }
         
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
             actionSheet.addAction(photoLibrary)
         }
         
-        let cancel = UIAlertAction(title: "Cancel", style: .Cancel) { [unowned self] (action) -> Void in
-            let result = SWImagePickerManagerResult.Cancelled
-            self.handler?(result: result)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { [unowned self] (action) -> Void in
+            let result = SWImagePickerManagerResult.cancelled
+            self.handler?(result)
         }
         
         actionSheet.addAction(cancel)
@@ -104,17 +104,17 @@ public class SWImagePickerManager: NSObject, UIImagePickerControllerDelegate, UI
         }
         
         
-        viewController.presentViewController(actionSheet, animated: true, completion: nil)
+        viewController.present(actionSheet, animated: true, completion: nil)
     }
     
-    private func showImagePickerWithSourceType(sourceType: UIImagePickerControllerSourceType, fromViewController viewController: UIViewController, source: AnyObject) {
+    fileprivate func showImagePickerWithSourceType(_ sourceType: UIImagePickerControllerSourceType, fromViewController viewController: UIViewController, source: AnyObject) {
         
         let picker = UIImagePickerController()
         picker.allowsEditing = false
         picker.mediaTypes = [kUTTypeImage as String]
         picker.sourceType = sourceType
         picker.delegate = self
-        picker.modalPresentationStyle = .Popover
+        picker.modalPresentationStyle = .popover
         
         if let barButtonItem = source as? UIBarButtonItem {
             picker.popoverPresentationController?.barButtonItem = barButtonItem
@@ -123,50 +123,50 @@ public class SWImagePickerManager: NSObject, UIImagePickerControllerDelegate, UI
             picker.popoverPresentationController?.sourceRect = sourceView.bounds
         }
         
-        viewController.presentViewController(picker, animated: true, completion: {})
+        viewController.present(picker, animated: true, completion: {})
     }
     
     // MARK: - UIImagePickerControllerDelegate
-    public func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    open func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         let image = (info[UIImagePickerControllerEditedImage] ?? info[UIImagePickerControllerOriginalImage]) as! UIImage
         
-        let result = SWImagePickerManagerResult.Image(image)
+        let result = SWImagePickerManagerResult.image(image)
         
         
-        picker.dismissViewControllerAnimated(true) { () -> Void in
+        picker.dismiss(animated: true) { () -> Void in
             // handle after dismissed
-            self.handler(result: result)
+            self.handler(result)
         }
     }
     
-    public func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        let result = SWImagePickerManagerResult.Cancelled
+    open func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        let result = SWImagePickerManagerResult.cancelled
         
-        picker.dismissViewControllerAnimated(true) { () -> Void in
-            self.handler(result: result)
+        picker.dismiss(animated: true) { () -> Void in
+            self.handler(result)
         }
     }
     
-    private func fetchLastPhotoTakenForTargetSize(size: CGSize, completion: (image: UIImage?) -> ()) {
-        let imageManager = PHImageManager.defaultManager()
+    fileprivate func fetchLastPhotoTakenForTargetSize(_ size: CGSize, completion: @escaping (_ image: UIImage?) -> ()) {
+        let imageManager = PHImageManager.default()
         
         let requestOptions = PHImageRequestOptions()
-        requestOptions.synchronous = true
-        requestOptions.networkAccessAllowed = true
+        requestOptions.isSynchronous = true
+        requestOptions.isNetworkAccessAllowed = true
         
         let fetchOptions = PHFetchOptions()
         fetchOptions.sortDescriptors = [NSSortDescriptor(key: "modificationDate", ascending: false)]
         
-        let result = PHAsset.fetchAssetsWithMediaType(.Image, options: fetchOptions)
-        if let asset = result.firstObject as? PHAsset {
-            dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0), { () -> Void in
-                imageManager.requestImageForAsset(asset, targetSize: size, contentMode: .AspectFill, options: requestOptions, resultHandler: { (image, info) -> Void in
+        let result = PHAsset.fetchAssets(with: .image, options: fetchOptions)
+        if let asset = result.firstObject {
+            DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async(execute: { () -> Void in
+                imageManager.requestImage(for: asset, targetSize: size, contentMode: .aspectFill, options: requestOptions, resultHandler: { (image, info) -> Void in
                     
                     print("info \(info)")
                     
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        completion(image: image)
+                    DispatchQueue.main.async(execute: { () -> Void in
+                        completion(image)
                     })
                 })
             })

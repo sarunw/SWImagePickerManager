@@ -1,5 +1,5 @@
 PODS:
-  - SWImagePickerManager (0.1.0)
+  - SWImagePickerManager (2.0.0)
 
 DEPENDENCIES:
   - SWImagePickerManager (from `../`)
@@ -9,6 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SWImagePickerManager: bd8b1332eb4764f56bce24bd1df1ebe8dfaf7adc
+  SWImagePickerManager: 851a8a7513620d30fe0f44ad804b3a4f7185de35
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 23686ea2bf3c8abf2b6a41d4f42c5bd64dfc8870
+
+COCOAPODS: 1.2.0.beta.3

@@ -1,12 +1,10 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'SWImagePickerManager_Example', :exclusive => true do
-  pod "SWImagePickerManager", :path => "../"
-end
-
-target 'SWImagePickerManager_Tests', :exclusive => true do
+target 'SWImagePickerManager_Example' do
   pod "SWImagePickerManager", :path => "../"
 
-  
+  target 'SWImagePickerManager_Tests' do
+    inherit! :search_paths
+  end
 end
